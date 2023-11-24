@@ -17,22 +17,25 @@ export const ContactList = () => {
   );
 
   return (
-    <ul className={css.contactList}>
-      {filteredContacts.map(({ id, name, number }) => (
-        <li key={id} className={css.contactItem}>
-          <p className={css.contactText}>
-            {name}: {number}
-          </p>
-          <button
-            className={css.contactListBtn}
-            type="button"
-            onClick={() => dispatch(deleteContact(id))}
-          >
-            Delete
-          </button>
-        </li>
-      ))}
-    </ul>
+    <>
+      <ul className={css.contactList}>
+        {filteredContacts.map(({ id, name, number }) => (
+          <li key={id} className={css.contactItem}>
+            <p className={css.contactText}>
+              {name}: {number}
+            </p>
+            <button
+              className={css.contactListBtn}
+              type="button"
+              onClick={() => dispatch(deleteContact(id))}
+            >
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
+      {filteredContacts.lenght === 0 && <p>Not Found</p>}
+    </>
   );
 };
 
