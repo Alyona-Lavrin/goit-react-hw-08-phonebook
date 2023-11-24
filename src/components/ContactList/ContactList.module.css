@@ -33,4 +33,7 @@
   .contactText, .notFound {
     font-weight: 700;
     font-size: 18px;
+    text-align: center;
+    margin: auto;
+    text-shadow: 1px 1px 10px #4d4d4d;
   }
