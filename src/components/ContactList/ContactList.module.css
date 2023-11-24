@@ -30,7 +30,7 @@
     transition: all 250ms;
   }
   
-  .contactText {
+  .contactText, .notFound {
     font-weight: 700;
     font-size: 18px;
   }

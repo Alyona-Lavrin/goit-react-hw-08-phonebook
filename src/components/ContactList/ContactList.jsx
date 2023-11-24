@@ -34,7 +34,7 @@ export const ContactList = () => {
           </li>
         ))}
       </ul>
-      {filteredContacts.length === 0 && <p>Not Found</p>}
+      {filteredContacts.length === 0 && <p className={css.notFound}>Not Found</p>}
     </>
   );
 };
